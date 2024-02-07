@@ -10,7 +10,7 @@ export class DbSchemaMigrationWithCustomResourcesStack extends Stack {
 
     const { vpc } = new SampleVPC(this, "SampleVPCForDbMigrations");
     const database = new Database(this, "SampleDatabaseForDbMigrations", {
-      applicationName: "sampleapp",
+      applicationName: "rbr-wms",
       migrationDirectoryPath: path.join(__dirname, "./migrations"),
       vpc,
     });
